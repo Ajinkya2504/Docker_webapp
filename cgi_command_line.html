@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>    
+<title> Command Line Terminal $ </title>
+ </head>
+
+
+<body>
+</body>
+<pre>
+    
+    <script>
+
+        function lw() {
+
+            var i = document.getElementById("cmd").value
+            var x = new XMLHttpRequest();
+            x.open("GET", "http://192.168.1.20/cgi-bin/hello.py?e=" + i ,true);
+            x.send();
+            x.onload = function () {
+                var output= x.responseText ; // output from above url
+                document.getElementById('output').innerHTML = output ;
+                 
+
+            }
+            
+            
+        }
+
+    </script>
+    <div id="d1">
+
+    </div>
+
+</pre>
+
+
+
+<div id="d2">
+<center> <h1> Command Line... </h1>  </center>
+</div>
+<style>
+    div#d2 {
+        top: 20px;
+        color: chocolate;
+    }
+</style>
+
+
+
+<center><input type="text" id="cmd" placeholder=" Enter the command here " /></center>
+<style>
+#cmd{
+    text-shadow: seagreen;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 35px;
+    width: 400px;
+    text-align: center;
+    color: mediumslateblue;
+    margin: auto;
+    border: 3px solid maroon;
+    align-self: center;
+    border-radius: 10px;
+    top: 300px;
+}
+</style>
+
+<center><button type="button" id="E" onclick="lw()" > Enter </button> </center>
+
+<center>
+    <div id="output"></div>
+</center>
+
+
+
+<style>
+
+body{
+    background-image: url('https://i.pinimg.com/originals/a2/dc/96/a2dc9668f2cf170fe3efeb263128b0e7.gif');
+    background-repeat: repeat;
+}
+
+/* div#container {
+
+    width: 600px;
+    height: 40px;
+    max-height: fit-content;
+    max-width: fit-content;
+
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+
+    margin: 35px 0;
+    border-color: coral;
+    border-width: 20px;
+    position: relative;
+    background-color: darkseagreen;
+    box-sizing: border-box;
+    border-radius: 15px;
+    opacity: 90%;
+    align-self: center;
+    
+    text-align: center;
+
+} */
+
+
+#E {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    padding: auto;
+    
+    border-radius: 15px;
+    border-color: brown;
+    margin: auto;
+    
+    right: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 300px;
+
+    
+
+
+}
+
+div#output {
+    width: 80%;
+    height: 50%;
+    max-height: 50rem;
+    position: absolute;
+    padding: 10px 15px ;
+    margin: 8px 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: darkgoldenrod;
+    box-shadow: darkmagenta;
+    float: center;
+    top: 350px;
+    bottom: 10px;
+    left: 150px;
+    right: 80;
+    margin: auto;
+    flex: 1;
+    text-align: center;
+    overflow: auto;
+    font-size: large;
+    opacity: 60%;
+
+    text-decoration-style: wavy;
+    text-shadow: 3px 3px rgb(255, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+
+
+}
+
+input [type=text],select {
+    font-size: 15px;
+    width: 50%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+</style>
+
+</html>
+
